@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>person</title>
+</head>
+<body>
+    
+   <header>
+       <ul>
+           <li><a href="/">HR</a></li>
+           <li><a href="/add">Add New Employ</a></li>
+       </ul>
+    
+   </header>
+
+   <section>
+       <h4>Name : <%=person.name%></h4>
+       <h3>age: <%=person.age%></h3>
+   </section>
+
+   <form action="/update/<%=person.id%>?_method=PUT" method="post">
+      <input type="text" name="name" value="<%=person.name%>">
+      <input type="text" name="age" value="<%=person.age%>">
+      <button>update</button>
+
+  </form>
+
+  <form action="/delete/<%=person.id%>?_method=delete" method="post">
+    <button>DELETE</button>
+</form>
+
+
+    
+</body>
+</html>

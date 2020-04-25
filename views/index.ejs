@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>person</title>
+</head>
+<body>
+    
+   <header>
+       <ul>
+           <li><a href="/">HR</a></li>
+           <li><a href="/add">Add New Employ</a></li>
+       </ul>
+    
+   </header>
+
+   <main>
+
+    <h1>HEELLLOOO</h1>
+       <section>
+        <%people.forEach((person)=>{%>
+            <h4>Name : <%=person.name%></h4>
+            <h5>Age : <%=person.age%></h5>
+            <a href="/people/<%=person.id%>">View Detail</a>
+        <%})%>
+       </section>
+   </main>
+
+</body>
+</html>
